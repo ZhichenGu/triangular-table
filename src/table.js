@@ -46,8 +46,8 @@ export function buildTable(){
   const angle=i*Math.PI*2/3,place=new THREE.Group();place.position.set(Math.sin(angle)*1.65,1.48,Math.cos(angle)*1.65);place.rotation.y=angle;root.add(place);
   const profile=[new THREE.Vector2(.001,.035),new THREE.Vector2(.48,.035),new THREE.Vector2(.62,.045),new THREE.Vector2(.77,.10),new THREE.Vector2(.88,.115),new THREE.Vector2(.91,.09),new THREE.Vector2(.88,.065),new THREE.Vector2(.65,.016),new THREE.Vector2(.001,.012)];
   const plate=mesh(new THREE.LatheGeometry(profile,80),china,place);plate.name='plate-'+i;
-  const rim=mesh(new THREE.TorusGeometry(.867,.006,6,80),trim,place,0,.114,0);rim.rotation.x=Math.PI/2;
-  const innerRing=mesh(new THREE.TorusGeometry(.625,.003,5,80),trim,place,0,.048,0);innerRing.rotation.x=Math.PI/2;
+  const rim=mesh(new THREE.TorusGeometry(.867,.006,6,80),trim,place,0,.114,0);rim.rotation.x=Math.PI/2;rim.name='plate-rim';
+  const innerRing=mesh(new THREE.TorusGeometry(.625,.003,5,80),trim,place,0,.048,0);innerRing.rotation.x=Math.PI/2;innerRing.name='plate-inner-ring';
   cutlery(place,-1.04,'fork');cutlery(place,1.04,'knife');glass(place,1.10,-.61);
   const napkin=mesh(new THREE.BoxGeometry(.32,.022,.49),new THREE.MeshStandardMaterial({color:0xd6d0c2,roughness:1}),place,-1.35,.025,.025);napkin.rotation.y=.08;
   places.push(place);
