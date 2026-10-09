@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101316"><meta name="description" content="一张三角餐桌，三件海洋形态的作品。旋转餐桌，近看每一道形态。">
+<title>潮汐之席 · The Tidal Table</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101316'/%3E%3Cpath d='M16 5 28 26H4Z M16 12 10 23h12Z' fill='%23dad4c5' fill-rule='evenodd'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="masthead"><a class="identity" href="./" aria-label="潮汐之席首页"><span class="mark">△</span><span>THE TIDAL TABLE<small>潮 汐 之 席</small></span></a><span class="edition">AN INTERACTIVE STUDY <span>NO. 001—003</span></span><button id="about" class="text-button">关于这张餐桌 <span>＋</span></button></header>
+<main>
+<div class="intro"><span class="eyebrow">THREE OBJECTS. ONE TABLE.</span><h1>请入席。</h1><p>转动餐桌，近看海的另一种形态。</p></div>
+<div id="scene" role="region" aria-label="可交互三角餐桌，使用 A 和 D 切换餐桌侧面"><p id="loading">正在布置餐桌<span>…</span></p><div id="hotspots"></div></div>
+<div id="hover-hint" class="hover-hint" hidden><span id="hover-name"></span><small>滚轮缩放 · 左右拖动旋转</small></div>
+<section class="work-caption" aria-live="polite"><span class="eyebrow" id="work-number">OBJECT 01 / 03</span><h2 id="work-title">浪的形状</h2><p id="work-english">A wave, held still.</p><span class="material" id="work-material">青绿 · 泡沫白 · 流动的褶皱</span></section>
+<div class="object-controls" aria-label="当前物件控制"><span id="selected-label">物件 01</span><button id="smaller" aria-label="缩小当前物件">−</button><output id="scale-label">100%</output><button id="larger" aria-label="放大当前物件">＋</button><span class="control-divider"></span><button id="reset" aria-label="复位当前物件">复位</button></div>
+<nav class="table-controls" aria-label="餐桌方向"><button id="previous" aria-label="向左旋转餐桌 120 度"><kbd>A</kbd><span>向左转</span></button><div class="side-indicator"><span id="side">01</span><span class="slash">/</span><span>03</span><div class="side-dots"><i class="active"></i><i></i><i></i></div></div><button id="next" aria-label="向右旋转餐桌 120 度"><span>向右转</span><kbd>D</kbd></button></nav>
+<p class="scene-note">悬停作品，开启细节探索<span>三维概念习作 · 依据原稿近似呈现</span></p>
+<div id="status" class="sr-only" aria-live="polite"></div>
+</main>
+<footer><span>BETWEEN THE SEA & THE TABLE</span><span>三侧餐桌 / 三种形态 / 无限回望</span></footer>
+<dialog id="about-dialog"><button id="close-about" aria-label="关闭介绍">关闭 ×</button><span class="eyebrow">ABOUT THE TABLE</span><h2>把海，置于席间。</h2><p>一张中央留空的三角餐桌，承载三件取自你原稿的海洋形态。按 A / D，每次转动 120°；也可以使用画面下方的按钮。</p><p>鼠标悬停作品后，滚轮缩放，按住左右拖动可环视。触屏可点选作品、拖动旋转，并用 ＋ / − 缩放。复位只影响当前物件。</p><p class="disclosure">当前物件为依据二维原稿制作的程序化三维概念近似。未提供的侧面与背面属于推测，并非最终建模或原作的精确复刻。</p><figure><img src="/reference-objects.jpg" alt="用户提供的原稿：海浪、珠母贝螺旋与红色海螺，分别置于餐盘上" loading="lazy"><figcaption>三个物件的原始视觉参考</figcaption></figure></dialog>
+<script type="module" src="/src/main.js"></script>
+</body></html>
